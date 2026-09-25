@@ -5,15 +5,16 @@ package org.example;
 public class Main {
 
     public static void main(String[] args) {
-        MessageService messageService = new EmailMessageService();
+        Container container = new Container();
 
-        NotificationService notificationService =
-                new SimpleNotificationService(messageService);
+        SimpleNotificationService notificationService =
+                container.getInstance(SimpleNotificationService.class);
 
-        notificationService.notifyUser("Hello from manual dependency injection!");
+        notificationService.notifyUser("Hello from the DI container!");
     }
-
 }
+
+
 
 
 
