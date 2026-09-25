@@ -1,5 +1,8 @@
 package org.example;
 
+import jakarta.enterprise.context.Dependent;
+
+@Dependent
 public class EmailMessageService implements MessageService {
 
     @Override
@@ -7,3 +10,6 @@ public class EmailMessageService implements MessageService {
         System.out.println("Email: " + message);
     }
 }
+
+
+
